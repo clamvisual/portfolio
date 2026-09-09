@@ -1,129 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #f5f2eb;
+  background: #f4f1e9;
   color: #171717;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  line-height: 1.45;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-/* CLAM DO TOPO */
-
-.hero h1 {
-  font-size: clamp(3.2rem, 7vw, 5.5rem);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* NOME COMPLETO E ARTISTA VISUAL */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-.nome-completo {
-  margin-bottom: 10px;
-  font-size: 0.72rem;
+
+/* =========================
+   MENU
+========================= */
+
+.nav-principal,
+.cabecalho-obra,
+.cabecalho-estudos {
+  padding: 24px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.04em;
 }
 
+.menu {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+}
+
+.menu a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+.hero {
+  min-height: auto;
+  height: auto;
+  display: block;
+}
+
+.hero-conteudo {
+  padding: 90px 7vw 100px;
+  display: block;
+}
+
+.nome-completo {
+  margin-bottom: 14px;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(55px, 7vw, 95px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
 .subtitulo {
-  margin-top: 12px;
-  font-size: 0.78rem;
+  margin-top: 17px;
+  font-size: 12px;
   opacity: 0.6;
 }
 
-/* TITULOS: OBRAS, SOBRE, CONTATO */
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+  padding: 75px 7vw;
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 55px;
+}
+
+.titulo-secao > p {
+  font-size: 9px;
+  opacity: 0.4;
+}
 
 .titulo-secao h2,
 .titulo-estudos {
-  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
-/* GALERIA DA HOME */
+
+/* =========================
+   OBRAS — HOME
+========================= */
 
 .galeria {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(2, 360px);
-  justify-content: center;
-  column-gap: 90px;
-  row-gap: 90px;
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  justify-content: space-between;
+
+  column-gap: 80px;
+  row-gap: 100px;
 }
 
 .obra {
-  width: 360px;
+  width: 100%;
+  max-width: 380px;
 }
 
 .obra:nth-child(even) {
-  margin-top: 55px;
+  margin-top: 65px;
+}
+
+.obra a {
+  display: block;
 }
 
 .obra a img {
-  width: 360px;
-  max-height: 470px;
+  width: 100%;
+  height: 430px;
   object-fit: contain;
+  object-position: center;
 }
 
-/* LEGENDA DAS OBRAS */
+.legenda {
+  margin-top: 12px;
+}
 
 .legenda h3 {
-  font-size: 0.82rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
   font-weight: 400;
 }
 
 .legenda p {
   margin-top: 3px;
-  font-size: 0.65rem;
+  font-size: 10px;
   opacity: 0.5;
 }
 
-/* CONTATO */
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+  margin-top: 80px;
+  background: #e9e5dc;
+}
+
+.apresentacao-artista {
+  max-width: 1050px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.foto-artista {
+  width: 300px;
+}
+
+.foto-artista img {
+  width: 100%;
+}
+
+.bio-artista {
+  max-width: 580px;
+}
+
+.bio-artista p {
+  margin-bottom: 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
 
 .contato {
-  padding-top: 60px;
+  padding-top: 65px;
   padding-bottom: 70px;
 }
 
 .contato .titulo-secao {
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 
 .contato .titulo-secao h2 {
-  font-size: 1.55rem;
+  font-size: 27px;
 }
 
 .links-contato {
+  width: 100%;
   max-width: 520px;
 }
 
 .links-contato a {
-  padding: 10px 0;
-  font-size: 1rem;
+  display: block;
+  padding: 11px 0;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
 }
 
-/* SOBRE */
-
-.bio-artista p {
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  line-height: 1.55;
+.links-contato a:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 
-/* CELULAR */
+.links-contato a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   PÁGINA INDIVIDUAL DA OBRA
+========================= */
+
+.pagina-obra {
+  padding: 60px 7vw 110px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 300px;
+  justify-content: center;
+  gap: 80px;
+  align-items: start;
+}
+
+.imagem-obra img {
+  max-height: 78vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.informacoes-obra {
+  position: sticky;
+  top: 40px;
+}
+
+.numero-obra {
+  margin-bottom: 15px;
+  font-size: 9px;
+  opacity: 0.4;
+}
+
+.informacoes-obra h1 {
+  margin-bottom: 28px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ficha-tecnica {
+  padding-top: 10px;
+  margin-bottom: 28px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ficha-tecnica p {
+  font-size: 11px;
+}
+
+.texto-obra p {
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================
+   ESTUDOS
+========================= */
+
+.pagina-estudos {
+  padding-top: 65px;
+}
+
+.introducao-estudos {
+  max-width: 500px;
+  margin-bottom: 55px;
+}
+
+.introducao-estudos p {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.galeria-estudos {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 35px;
+}
+
+.estudo img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+  padding: 25px 7vw 40px;
+  font-size: 9px;
+  opacity: 0.45;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 700px) {
+
+  .nav-principal,
+  .cabecalho-obra,
+  .cabecalho-estudos {
+    padding: 20px 5vw;
+  }
+
+  .menu {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .hero-conteudo {
+    padding: 70px 7vw 75px;
+  }
+
   .hero h1 {
-    font-size: 16vw;
+    font-size: 55px;
+  }
+
+  .secao {
+    padding: 60px 7vw;
+  }
+
+  .titulo-secao {
+    margin-bottom: 40px;
+  }
+
+  .titulo-secao h2,
+  .titulo-estudos {
+    font-size: 26px;
   }
 
   .galeria {
     grid-template-columns: 1fr;
-    justify-content: stretch;
-    row-gap: 45px;
+    justify-items: center;
+    row-gap: 60px;
   }
 
   .obra {
-    width: 100%;
     max-width: 320px;
-    margin: 0 auto;
   }
 
   .obra:nth-child(even) {
@@ -131,20 +412,47 @@ body {
   }
 
   .obra a img {
-    width: 100%;
+    height: auto;
     max-height: 420px;
   }
 
-  .titulo-secao h2,
-  .titulo-estudos {
-    font-size: 1.5rem;
+  .apresentacao-artista {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .foto-artista {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .bio-artista p {
+    font-size: 16px;
   }
 
   .contato .titulo-secao h2 {
-    font-size: 1.4rem;
+    font-size: 24px;
+  }
+
+  .links-contato {
+    max-width: 100%;
   }
 
   .links-contato a {
-    font-size: 0.95rem;
+    font-size: 14px;
+  }
+
+  .pagina-obra {
+    grid-template-columns: 1fr;
+    padding: 40px 7vw 80px;
+    gap: 35px;
+  }
+
+  .informacoes-obra {
+    position: static;
+  }
+
+  .galeria-estudos {
+    grid-template-columns: 1fr;
   }
 }
