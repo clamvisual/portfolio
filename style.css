@@ -1,5 +1,5 @@
 /* =========================
-   CONFIGURAÇÕES GERAIS
+   GERAL
    ========================= */
 
 * {
@@ -8,25 +8,21 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background: #f3f1ec;
   color: #111;
-
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 img {
   max-width: 100%;
@@ -39,85 +35,67 @@ img {
 
 .hero {
   min-height: 100vh;
-
-  padding: 32px 4vw;
+  padding: 30px 5vw;
 
   display: flex;
   flex-direction: column;
 }
 
-
-/* MENU */
-
 nav {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 }
 
-
 .logo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-
   letter-spacing: 0.08em;
 }
 
-
 .menu {
   display: flex;
-
-  gap: 28px;
-
-  font-size: 0.9rem;
+  gap: 25px;
+  font-size: 0.85rem;
 }
-
 
 .menu a {
   transition: opacity 0.2s ease;
 }
 
-
 .menu a:hover {
-  opacity: 0.45;
+  opacity: 0.5;
 }
 
 
-/* NOME PRINCIPAL */
+/* =========================
+   CLAM PRINCIPAL
+   ========================= */
 
 .hero-conteudo {
   flex: 1;
 
   display: flex;
   flex-direction: column;
-
   justify-content: flex-end;
 
-  padding-bottom: 4vh;
+  padding-bottom: 5vh;
 }
-
 
 .nome-completo {
-  font-size: 0.9rem;
-
-  margin-bottom: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
 }
-
 
 .hero h1 {
-  font-size: clamp(7rem, 25vw, 24rem);
-
-  line-height: 0.75;
-
-  letter-spacing: -0.07em;
+  font-size: clamp(6rem, 18vw, 15rem);
+  line-height: 0.8;
+  letter-spacing: -0.06em;
 }
 
-
 .subtitulo {
-  margin-top: 30px;
-
-  font-size: 1.2rem;
+  margin-top: 25px;
+  font-size: 1rem;
 }
 
 
@@ -126,36 +104,27 @@ nav {
    ========================= */
 
 .secao {
-  padding: 120px 4vw;
+  padding: 100px 5vw;
 }
-
 
 .titulo-secao {
   display: flex;
-
   align-items: flex-start;
+  gap: 20px;
 
-  gap: 25px;
-
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
-
 .titulo-secao > p {
-  font-size: 0.8rem;
-
+  font-size: 0.75rem;
   opacity: 0.5;
 }
 
-
 .titulo-secao h2 {
-  font-size: clamp(3rem, 7vw, 7rem);
-
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
   font-weight: normal;
-
-  letter-spacing: -0.05em;
-
-  line-height: 0.9;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 
@@ -165,54 +134,40 @@ nav {
 
 .galeria {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
-  gap: 90px 40px;
+  gap: 80px 40px;
 }
-
 
 .obra {
   width: 100%;
 }
 
-
 .obra img {
   width: 100%;
   height: auto;
-
   display: block;
 
-  transition:
-    opacity 0.3s ease,
-    transform 0.4s ease;
+  transition: opacity 0.3s ease;
 }
-
 
 .obra a:hover img {
-  opacity: 0.88;
-
-  transform: scale(0.995);
+  opacity: 0.85;
 }
-
 
 .legenda {
-  margin-top: 14px;
+  margin-top: 12px;
 }
-
 
 .legenda h3 {
-  font-size: 1rem;
-
+  font-size: 0.95rem;
   font-weight: normal;
 }
-
 
 .legenda p {
   margin-top: 5px;
 
-  font-size: 0.8rem;
-
+  font-size: 0.75rem;
   opacity: 0.55;
 }
 
@@ -223,52 +178,37 @@ nav {
 
 .sobre {
   background: #111;
-
   color: #f3f1ec;
 }
 
-
 .apresentacao-artista {
   display: grid;
-
   grid-template-columns: 0.8fr 1.2fr;
 
-  gap: 8vw;
-
+  gap: 7vw;
   align-items: start;
 }
-
-
-/* FOTO */
 
 .foto-artista {
   width: 100%;
 }
 
-
 .foto-artista img {
   width: 100%;
   height: auto;
-
   display: block;
 }
 
-
-/* BIO */
-
 .bio-artista {
-  padding-top: 5px;
+  max-width: 750px;
 }
 
-
 .bio-artista p {
-  font-size: clamp(1.8rem, 3.5vw, 4rem);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
 
-  line-height: 1.08;
-
-  letter-spacing: -0.035em;
-
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 
@@ -278,103 +218,81 @@ nav {
 
 .links-contato {
   display: flex;
-
   flex-direction: column;
 }
-
 
 .links-contato a {
   border-top: 1px solid #aaa;
 
-  padding: 25px 0;
+  padding: 22px 0;
 
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 
   transition:
     opacity 0.2s ease,
     padding-left 0.25s ease;
 }
 
-
 .links-contato a:last-child {
   border-bottom: 1px solid #aaa;
 }
 
-
 .links-contato a:hover {
   opacity: 0.5;
-
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 
 /* =========================
-   PÁGINAS DAS OBRAS
+   PÁGINAS INDIVIDUAIS
    ========================= */
 
 .cabecalho-obra {
-  padding: 32px 4vw;
+  padding: 30px 5vw;
 
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
-
 
 .pagina-obra {
-  padding: 60px 4vw 140px;
+  padding: 50px 5vw 120px;
 
   display: grid;
+  grid-template-columns: 1.4fr 1fr;
 
-  grid-template-columns: 1.5fr 1fr;
-
-  gap: 7vw;
-
+  gap: 6vw;
   align-items: start;
 }
-
-
-/* IMAGEM DA OBRA */
 
 .imagem-obra img {
   width: 100%;
   height: auto;
-
   display: block;
 }
 
-
-/* INFORMAÇÕES */
-
 .informacoes-obra {
   position: sticky;
-
   top: 40px;
 }
 
-
 .numero-obra {
-  font-size: 0.8rem;
-
+  font-size: 0.75rem;
   opacity: 0.4;
 
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-
 .informacoes-obra h1 {
-  font-size: clamp(3rem, 6vw, 7rem);
-
+  font-size: clamp(2.3rem, 4vw, 4rem);
   font-weight: normal;
 
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
+  line-height: 1;
 
-  line-height: 0.9;
-
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 
@@ -384,29 +302,24 @@ nav {
   border-top: 1px solid #aaa;
 
   padding-top: 15px;
-
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
-
 
 .ficha-tecnica p {
-  font-size: 0.9rem;
-
-  margin-bottom: 5px;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 
-/* TEXTO SOBRE A OBRA */
+/* DESCRIÇÃO DA OBRA */
 
 .texto-obra {
-  max-width: 500px;
+  max-width: 520px;
 }
 
-
 .texto-obra p {
-  font-size: 1.1rem;
-
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.65;
 
   margin-bottom: 20px;
 }
@@ -417,55 +330,42 @@ nav {
    ========================= */
 
 footer {
-  padding: 40px 4vw;
+  padding: 35px 5vw;
 
-  font-size: 0.75rem;
-
+  font-size: 0.7rem;
   opacity: 0.6;
 }
 
 
 /* =========================
-   TABLET / CELULAR
+   CELULAR
    ========================= */
 
 @media (max-width: 800px) {
-
-  /* MENU */
-
-  .menu {
-    gap: 14px;
-
-    font-size: 0.75rem;
-  }
-
-
-  /* INÍCIO */
 
   .hero {
     padding: 25px 5vw;
   }
 
-
   .hero h1 {
-    font-size: 31vw;
+    font-size: 28vw;
   }
 
-
-  .nome-completo {
-    font-size: 0.8rem;
+  .menu {
+    gap: 13px;
+    font-size: 0.72rem;
   }
-
-
-  /* SEÇÕES */
 
   .secao {
-    padding: 80px 5vw;
+    padding: 70px 5vw;
   }
 
-
   .titulo-secao {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+  }
+
+  .titulo-secao h2 {
+    font-size: 2.5rem;
   }
 
 
@@ -473,8 +373,7 @@ footer {
 
   .galeria {
     grid-template-columns: 1fr;
-
-    gap: 60px;
+    gap: 55px;
   }
 
 
@@ -482,86 +381,80 @@ footer {
 
   .apresentacao-artista {
     grid-template-columns: 1fr;
-
-    gap: 45px;
+    gap: 35px;
   }
-
 
   .foto-artista {
-    max-width: 500px;
+    max-width: 450px;
   }
-
 
   .bio-artista p {
-    font-size: 1.8rem;
-
-    line-height: 1.12;
+    font-size: 1.2rem;
+    line-height: 1.45;
   }
 
 
-  /* PÁGINAS DAS OBRAS */
+  /* OBRA INDIVIDUAL */
 
   .pagina-obra {
     grid-template-columns: 1fr;
 
-    padding: 30px 5vw 100px;
+    padding: 30px 5vw 80px;
 
-    gap: 50px;
+    gap: 40px;
   }
-
-
-  .cabecalho-obra {
-    padding: 25px 5vw;
-  }
-
 
   .informacoes-obra {
     position: static;
   }
 
-
   .informacoes-obra h1 {
-    margin-bottom: 35px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
   }
-
 
   .ficha-tecnica {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
+  .texto-obra p {
+    font-size: 1rem;
+  }
+
+
+  /* CONTATO */
+
+  .links-contato a {
+    font-size: 1.5rem;
+  }
 }
 
 
 /* =========================
-   CELULARES PEQUENOS
+   CELULAR PEQUENO
    ========================= */
 
 @media (max-width: 500px) {
 
-  .menu {
-    gap: 10px;
-
-    font-size: 0.7rem;
-  }
-
-
   .logo {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-
-  .hero h1 {
-    font-size: 30vw;
+  .menu {
+    gap: 9px;
+    font-size: 0.68rem;
   }
 
+  .nome-completo {
+    font-size: 0.75rem;
+  }
 
   .subtitulo {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-
   .bio-artista p {
-    font-size: 1.55rem;
+    font-size: 1.1rem;
   }
 
 }
