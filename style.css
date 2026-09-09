@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3f1ec;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* TOPO */
+
+.hero {
+  min-height: 100vh;
+  padding: 32px 4vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  font-size: 0.9rem;
+}
+
+.menu a:hover {
+  opacity: 0.5;
+}
+
+.hero-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 4vh;
+}
+
+.nome-completo {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(7rem, 25vw, 24rem);
+  line-height: 0.75;
+  letter-spacing: -0.07em;
+}
+
+.subtitulo {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+/* SEÇÕES */
+
+.secao {
+  padding: 120px 4vw;
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.titulo-secao p {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.titulo-secao h2 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: normal;
+  letter-spacing: -0.05em;
+}
+
+/* GALERIA */
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px 40px;
+}
+
+.obra img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.legenda {
+  margin-top: 14px;
+}
+
+.legenda h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.legenda p {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+/* SOBRE */
+
+.sobre {
+  background: #111;
+  color: #f3f1ec;
+}
+
+.texto-sobre {
+  max-width: 1000px;
+  margin-left: auto;
+}
+
+.texto-sobre p {
+  font-size: clamp(1.8rem, 4vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 40px;
+}
+
+/* CONTATO */
+
+.links-contato {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-contato a {
+  border-top: 1px solid #aaa;
+  padding: 25px 0;
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+.links-contato a:last-child {
+  border-bottom: 1px solid #aaa;
+}
+
+.links-contato a:hover {
+  opacity: 0.5;
+}
+
+/* RODAPÉ */
+
+footer {
+  padding: 40px 4vw;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+  .menu {
+    gap: 12px;
+    font-size: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 32vw;
+  }
+
+  .secao {
+    padding: 80px 5vw;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+}
